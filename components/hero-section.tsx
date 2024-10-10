@@ -44,7 +44,7 @@ export default function HeroSection() {
   }
 
   return (
-    <div className="mx-auto max-w-6xl mt-20 lg:mt-6 px-6 lg:px-8 bg-transparent relative dark:bg-grid-white/[0.2] bg-grid-black/[0.2]">
+    <div className="mx-auto max-w-6xl mt-20 lg:mt-6 px-6 lg:px-8 bg-transparent relative bg-grid-white/[0.2] dark:bg-grid-black/[0.2]">
       <CardPattern
         mouseX={mouseX}
         mouseY={mouseY}

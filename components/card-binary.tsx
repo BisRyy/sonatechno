@@ -1,6 +1,4 @@
 import React from "react";
-import Link from "next/link";
-import HackyButton from "./hacky-button";
 import ButtonStd from "./button-std";
 import { Separator } from "./separator";
 import { EvervaultCard, Icon } from "./icon";

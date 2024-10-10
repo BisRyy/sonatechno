@@ -1,13 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import React from "react";
 import { toast } from "./use-toast";
 
 const Contact = () => {
   const [hasMounted, setHasMounted] = React.useState(false);
-  const [email, setEmail] = React.useState("");
-  const [loading, setLoading] = React.useState(false);
 
   React.useEffect(() => {
     setHasMounted(true);
@@ -16,30 +13,13 @@ const Contact = () => {
     return null;
   }
 
-  const handleClick = async (
-    e:
-      | React.MouseEvent<HTMLButtonElement, MouseEvent>
-      | React.FormEvent<HTMLFormElement>
-  ) => {
-    e.preventDefault();
-    setLoading(true);
-
-    setLoading(false);
-
-    return toast({
-      title: "Successfully Subscribed",
-      description: `Thanks for your subscription. We will be in touch with you for updates , posts and stuffs! `,
-      variant: "default",
-    });
-  };
-
   return (
     <>
       {/* <!-- ===== Contact Start ===== --> */}
       <section id="contact" className="relative px-4 md:px-8 2xl:px-0 mb-8">
         <div className="relative mx-auto max-w-[1390px] px-7.5 pt-10 lg:px-15 lg:pt-15 xl:px-20 xl:pt-20">
           {/* Background gradient */}
-          <div className="absolute left-0 top-0 -z-10 h-2/3 w-full rounded-lg bg-gradient-to-t from-transparent dark:to-blue-100 to-gray-800"></div>
+          <div className="absolute left-0 top-0 -z-10 h-2/3 w-full rounded-lg bg-gradient-to-t from-transparent to-blue-100 dark:to-gray-800"></div>
 
           <div className="flex flex-col-reverse flex-wrap gap-8 md:flex-row md:flex-nowrap md:justify-between xl:gap-20">
             {/* Form Section */}
@@ -58,9 +38,9 @@ const Contact = () => {
               whileInView="visible"
               transition={{ duration: 1, delay: 0.1 }}
               viewport={{ once: true }}
-              className="w-full rounded-lg dark:bg-white p-8 shadow-xl bg-gray-900 dark:border border-gray-700 md:w-3/5 lg:w-3/4 xl:p-12"
+              className="w-full rounded-lg bg-white p-8 shadow-xl dark:bg-gray-900 dark:border dark:border-gray-700 md:w-3/5 lg:w-3/4 xl:p-12"
             >
-              <h2 className="mb-8 text-4xl font-bold dark:text-gray-900 text-white xl:text-5xl">
+              <h2 className="mb-8 text-4xl font-bold text-gray-900 dark:text-white xl:text-5xl">
                 Send a message
               </h2>
 
@@ -69,13 +49,13 @@ const Contact = () => {
                   <input
                     type="text"
                     placeholder="Full name"
-                    className="w-full border-b dark:border-gray-300 bg-transparent py-4 dark:focus:border-blue-500 dark:focus:placeholder:text-gray-900 focus:outline-none border-gray-600 focus:border-gray-400 focus:placeholder:text-white lg:w-1/2 text-white"
+                    className="w-full border-b border-gray-300 bg-transparent py-4 focus:outline-none focus:border-blue-500 focus:placeholder:text-gray-900 dark:border-gray-600 dark:focus:border-gray-400 dark:focus:placeholder:text-white lg:w-1/2 dark:text-white"
                   />
 
                   <input
                     type="email"
                     placeholder="Email address"
-                    className="w-full border-b dark:border-gray-300 bg-transparent py-4 dark:focus:border-blue-500 dark:focus:placeholder:text-gray-900 focus:outline-none border-gray-600 focus:border-gray-400 focus:placeholder:text-white lg:w-1/2 text-white"
+                    className="w-full border-b border-gray-300 bg-transparent py-4 focus:outline-none focus:border-blue-500 focus:placeholder:text-gray-900 dark:border-gray-600 dark:focus:border-gray-400 dark:focus:placeholder:text-white lg:w-1/2 dark:text-white"
                   />
                 </div>
 
@@ -83,13 +63,13 @@ const Contact = () => {
                   <input
                     type="text"
                     placeholder="Subject"
-                    className="w-full border-b dark:border-gray-300 bg-transparent py-4 dark:focus:border-blue-500 dark:focus:placeholder:text-gray-900 focus:outline-none border-gray-600 focus:border-gray-400 focus:placeholder:text-white lg:w-1/2 text-white"
+                    className="w-full border-b border-gray-300 bg-transparent py-4 focus:outline-none focus:border-blue-500 focus:placeholder:text-gray-900 dark:border-gray-600 dark:focus:border-gray-400 dark:focus:placeholder:text-white lg:w-1/2 dark:text-white"
                   />
 
                   <input
                     type="text"
                     placeholder="Phone number"
-                    className="w-full border-b dark:border-gray-300 bg-transparent py-4 dark:focus:border-blue-500 dark:focus:placeholder:text-gray-900 focus:outline-none border-gray-600 focus:border-gray-400 focus:placeholder:text-white lg:w-1/2 text-white"
+                    className="w-full border-b border-gray-300 bg-transparent py-4 focus:outline-none focus:border-blue-500 focus:placeholder:text-gray-900 dark:border-gray-600 dark:focus:border-gray-400 dark:focus:placeholder:text-white lg:w-1/2 dark:text-white"
                   />
                 </div>
 
@@ -97,7 +77,7 @@ const Contact = () => {
                   <textarea
                     placeholder="Message"
                     rows={5}
-                    className="w-full border-b dark:border-gray-300 bg-transparent py-4 dark:focus:border-blue-500 dark:focus:placeholder:text-gray-900 focus:outline-none border-gray-600 focus:border-gray-400 focus:placeholder:text-white text-white"
+                    className="w-full border-b border-gray-300 bg-transparent py-4 focus:outline-none focus:border-blue-500 focus:placeholder:text-gray-900 dark:border-gray-600 dark:focus:border-gray-400 dark:focus:placeholder:text-white dark:text-white"
                   ></textarea>
                 </div>
 
@@ -106,11 +86,11 @@ const Contact = () => {
                     <input
                       id="checkbox"
                       type="checkbox"
-                      className="peer mt-1 flex h-5 w-5 items-center justify-center rounded border border-gray-300 bg-gray-100 peer-checked:bg-blue-600 dark:border-gray-600 dark:bg-gray-700"
+                      className="peer mt-1 flex h-5 w-5 items-center justify-center rounded border border-gray-600 bg-gray-700 peer-checked:bg-blue-600 dark:border-gray-300 dark:bg-gray-100"
                     />
                     <label
                       htmlFor="checkbox"
-                      className="cursor-pointer select-none text-md dark:text-gray-600 text-gray-400"
+                      className="cursor-pointer select-none text-md text-gray-600 dark:text-gray-400"
                     >
                       I agree to the terms and consent to cookie usage.
                     </label>
@@ -118,7 +98,7 @@ const Contact = () => {
 
                   <button
                     aria-label="send message"
-                    className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-3 text-white font-medium shadow-lg transition-all hover:bg-gradient-to-l hover:scale-105 dark:bg-gradient-to-r dark:from-gray-700 dark:to-gray-800"
+                    className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-gray-700 to-gray-800 px-8 py-3 text-white font-medium shadow-lg transition-all hover:bg-gradient-to-l hover:scale-105 dark:bg-gradient-to-r dark:from-blue-600 dark:to-indigo-600"
                     type="submit"
                   >
                     Send Message
@@ -153,23 +133,23 @@ const Contact = () => {
               viewport={{ once: true }}
               className="w-full md:w-2/5 p-8 lg:w-[26%] xl:pt-15"
             >
-              <h2 className="mb-12 text-4xl font-bold dark:text-gray-900 text-white xl:text-5xl">
+              <h2 className="mb-12 text-4xl font-bold text-gray-900 dark:text-white xl:text-5xl">
                 Find us
               </h2>
 
               <div className="mb-8">
-                <h3 className="mb-2 text-lg font-semibold dark:text-gray-800 text-white">
+                <h3 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
                   Our Location
                 </h3>
-                <p className="dark:text-gray-600 text-gray-400">
+                <p className="text-gray-600 dark:text-gray-400">
                   Ambo, Oromia, Ethiopia
                 </p>
               </div>
               <div className="mb-8">
-                <h3 className="mb-2 text-lg font-semibold dark:text-gray-800 text-white">
+                <h3 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
                   Email Address
                 </h3>
-                <p className="dark:text-gray-600 text-gray-400">
+                <p className="text-gray-600 dark:text-gray-400">
                   <a
                     href="mailto:contact@sonatechno.com"
                     className="hover:underline"
@@ -179,7 +159,7 @@ const Contact = () => {
                 </p>
               </div>
               <div>
-                <h3 className="mb-2 text-lg font-semibold dark:text-gray-800 text-white">
+                <h3 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
                   Phone Number
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400">

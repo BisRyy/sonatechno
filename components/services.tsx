@@ -33,15 +33,15 @@ const SectionHeader = ({ headerInfo }: { headerInfo: HeaderInfo }) => {
         viewport={{ once: true }}
         className="animate_top mx-auto text-center"
       >
-        <div className="mb-4 inline-block rounded-full bg-gray-900 px-4.5 py-1.5 dark:border dark:border-gray-200 dark:bg-white">
-          <span className="text-white font-medium dark:text-black">
+        <div className="mb-4 inline-block rounded-full bg-white px-4.5 py-1.5 dark:border dark:border-gray-200 dark:bg-gray-900">
+          <span className="text-black font-medium dark:text-white">
             {title}
           </span>
         </div>
-        <h2 className="mx-auto mb-4 text-3xl font-bold text-gray-100 dark:text-gray-900 md:w-4/5 xl:w-1/2 xl:text-4xl">
+        <h2 className="mx-auto mb-4 text-3xl font-bold text-gray-900 dark:text-gray-100 md:w-4/5 xl:w-1/2 xl:text-4xl">
           {subtitle}
         </h2>
-        <p className="mx-auto text-gray-300 dark:text-gray-600 md:w-4/5 lg:w-3/5 xl:w-[46%]">
+        <p className="mx-auto text-gray-600 dark:text-gray-300 md:w-4/5 lg:w-3/5 xl:w-[46%]">
           {description}
         </p>
       </motion.div>
