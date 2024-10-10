@@ -2,6 +2,7 @@ import HeroSection from "@/components/hero-section";
 import Lamper from "@/components/lamp";
 import Contact from "@/components/contact";
 import Feature from "@/components/services";
+import FooterSection from "@/components/footer";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Lamper />
       <Feature />
       <Contact />
+      <FooterSection />
     </div>
   );
 }
