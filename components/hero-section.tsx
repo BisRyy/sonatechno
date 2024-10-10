@@ -85,7 +85,7 @@ export default function HeroSection() {
           </motion.h1>
           <motion.p
             variants={FADE_DOWN_ANIMATION_VARIANTS}
-            className="mt-6 text-lg leading-8 text-white dark:text-black"
+            className="mt-6 text-lg leading-8 dark:text-white text-black"
           >
             IT Support Provider and Network Engineer
           </motion.p>
