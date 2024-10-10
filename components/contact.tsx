@@ -151,7 +151,7 @@ const Contact = () => {
               whileInView="visible"
               transition={{ duration: 2, delay: 0.1 }}
               viewport={{ once: true }}
-              className="w-full md:w-2/5 md:p-7.5 lg:w-[26%] xl:pt-15"
+              className="w-full md:w-2/5 p-8 lg:w-[26%] xl:pt-15"
             >
               <h2 className="mb-12 text-4xl font-bold dark:text-gray-900 text-white xl:text-5xl">
                 Find us
